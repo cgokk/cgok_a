@@ -1,23 +1,20 @@
-<!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>고량주</title>
-</head>
-
-<body>
+    <Head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>고량주</title>
+        <link rel="stylesheet" href="./style.css">
+    </Head>
+    <body>
     <header>
-        <div class="title">술 리뷰 들어갑니다</div>
+        <span class="title">고량주</span>
     </header>
-
     <main>
         <div class="nav">
-        <span>소주</span>
-        <span>맥주</span>
-        </div>
+            <span>소주</span>
+            <span>맥주</span>
+            <button type="button" class="add-button" id="addItem">추가</button>
+            </div>
 
         <section class="container">
             <div class="card">
@@ -45,25 +42,25 @@
                 <span>병 색이 예쁨. 마케팅 잘함.</span>
             </div> 
         </section>
+    </main>
 
     <div class="modal-background" id="modal">
         <form class="modal" id="addItemForm">
             <span class="modal-close" id="closeModal">X</span>
+
             <label for="name" class="label">이름</label>
+            <input id="name" type="text" placeholder="ex) 이슬톡톡" class="input" maxlength="10" required/>
 
-            <input id="name" type="text" placeholder="화이트와인" class="input" maxlength="10" required/>
             <label for="image" class="label">이미지</label>
-
-            <input id="image" type="text" placeholder="URL" class="input" required />
+            <input id="image" type="text" placeholder="URL를 입력하세요" class="input" required />
+            
             <label for="content" class="label">내용</label>
+            <input id="content" type="text" placeholder="내용을 입력하세요" class="input" required />
 
-            <input id="content" type="text" placeholder="주로 청포도로 만든다네요." class="input" required />
-            <button type="submit" class="submit-button">저장</button>
+            <button type="submit" class="submit-button">입력</button>
         </form>
     </div>
-</div>
-</main>
     <script src="./modal.js"></script>
     <script src="./addItem.js"></script>
-</body>
+    </body>
 </html>
